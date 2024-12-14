@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./script.js" type="module" defer></script>
+  </head>
+  <style>
+    * {
+      font-family: "Courier New", Courier, monospace;
+    }
+
+    .main {
+      display: flex;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+    }
+  </style>
+  <body>
+    <h1>Morse Code Translator</h1>
+    <div class="main">
+      <div class="container">
+        <form id="form-word-morse">
+          <!-- <label>English to Morse Code</label> -->
+          <textarea id="word" name="word" rows="10"> </textarea>
+          <button id="word-morse">Translate</button>
+          <p id="results1"></p>
+        </form>
+      </div>
+      <div class="container">
+        <form id="form-morse-word">
+          <!-- <label>Morse Code to English</label> -->
+          <textarea id="morse-word-area" name="morse-word-area"> </textarea>
+
+          <button id="morse-word">Translate</button>
+          <p id="results2"></p>
+        </form>
+      </div>
+      <p id="errors"></p>
+    </div>
+  </body>
+</html>
