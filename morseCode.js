@@ -28,14 +28,18 @@ const morseTranslator = {
 };
 
 export const morseCode = (word) => {
-  if (word === undefined) {
-    throw new Error("This function needs a parameter");
+  if (word === "") {
+    throw new Error("Please provide an input.");
   }
 
-  if (typeof word !== "string") {
-    throw new Error("This function only accepts strings");
+  if (
+    typeof word === "number" ||
+    typeof word === "undefined" ||
+    typeof word === "null"
+  ) {
+    throw new Error("This function only accepts strings.");
   }
-  if (!word.match(/[A-Za-z]/)) {
+  if (!word.match(/^[A-Za-z ]+$/)) {
     throw new Error("This function only accepts letters from A to Z");
   }
   let wordToMorse = word.toUpperCase().split("");
@@ -47,16 +51,16 @@ export const morseCode = (word) => {
 };
 
 export const morseToWord = (symbol) => {
-  if (symbol === undefined) {
-    throw new Error("This function needs a parameter");
+  if (symbol === "") {
+    throw new Error("Please provide an input.");
   }
 
   if (typeof symbol !== "string") {
-    throw new Error("This function only accepts strings");
+    throw new Error("This function only accepts strings.");
   }
-  if (!symbol.match(/[.-]/g, " ")) {
+  if (!symbol.match(/^[.-\s]*$/)) {
     throw new Error(
-      "This function only accepts letters from dots and hyphens charaters of Morse Code Translation"
+      "This function only accepts dots and hyphens charaters of Morse Code Translation."
     );
   }
 

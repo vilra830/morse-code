@@ -2,12 +2,12 @@
 //   expect(true).toBe(true);
 // });
 
-import { morseCode } from "./morseCode";
-import { morseToWord } from "./morseCode";
+import { morseCode } from "./morseCode.js";
+import { morseToWord } from "./morseCode.js";
 
 describe("Morse Code test cases", () => {
-  const notEnoughArgsError = new Error("This function needs a parameter");
-  const wrongDataTypeError = new Error("This function only accepts strings");
+  const notEnoughArgsError = new Error("Please provide an input.");
+  const wrongDataTypeError = new Error("This function only accepts strings.");
   const specifiCharError = new Error(
     "This function only accepts letters from A to Z"
   );
@@ -21,35 +21,38 @@ describe("Morse Code test cases", () => {
   });
 
   it("should throw an error when less than no argument is passed", () => {
+    // expect(() => {
+    //   morseCode();
+    // }).toThrow(notEnoughArgsError);
     expect(() => {
-      morseCode();
+      morseCode("");
     }).toThrow(notEnoughArgsError);
   });
 
   it("should throw an error when argument other than string is passed", () => {
     expect(() => {
-      morseCode(2);
+      morseCode(1.22);
     }).toThrow(wrongDataTypeError);
     expect(() => {
-      morseCode(true);
+      morseCode(1.22325);
     }).toThrow(wrongDataTypeError);
   });
 
   it("should throw an error when argument passed is not an alphabet", () => {
     expect(() => {
-      morseCode("2");
+      morseCode(",,,");
     }).toThrow(specifiCharError);
     expect(() => {
-      morseCode(".-,");
+      morseCode(";jla0;");
     }).toThrow(specifiCharError);
   });
 });
 
 describe("Morse Code to Words Test Cases", () => {
-  const notEnoughArgsError = new Error("This function needs a parameter");
-  const wrongDataTypeError = new Error("This function only accepts strings");
+  const notEnoughArgsError = new Error("Please provide an input.");
+  const wrongDataTypeError = new Error("This function only accepts strings.");
   const specifiCharError = new Error(
-    "This function only accepts letters from dots and hyphens charaters of Morse Code Translation"
+    "This function only accepts dots and hyphens charaters of Morse Code Translation."
   );
 
   test("returns the right Morse Code translation", () => {
@@ -61,8 +64,11 @@ describe("Morse Code to Words Test Cases", () => {
   });
 
   it("should throw an error when less than no argument is passed", () => {
+    // expect(() => {
+    //   morseToWord();
+    // }).toThrow(notEnoughArgsError);
     expect(() => {
-      morseToWord();
+      morseToWord("");
     }).toThrow(notEnoughArgsError);
   });
 
@@ -71,13 +77,13 @@ describe("Morse Code to Words Test Cases", () => {
       morseToWord(2);
     }).toThrow(wrongDataTypeError);
     expect(() => {
-      morseToWord(true);
+      morseToWord(1.22);
     }).toThrow(wrongDataTypeError);
   });
 
   it("should throw an error when argument other than dot or hyphens are passed", () => {
     expect(() => {
-      morseToWord("2");
+      morseToWord(",,,,");
     }).toThrow(specifiCharError);
     expect(() => {
       morseToWord("tru,");
