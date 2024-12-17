@@ -1,4 +1,5 @@
-import { morseCode, morseToWord } from "./morseCode.js";
+import { morseCode } from "./morseCode.js";
+import { morseToWord } from "./morseCode.js";
 
 const form1 = document.getElementById("form-word-morse");
 const form2 = document.getElementById("form-morse-word");

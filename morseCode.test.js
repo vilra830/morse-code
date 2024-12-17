@@ -1,7 +1,3 @@
-// test("dummy test", () => {
-//   expect(true).toBe(true);
-// });
-
 import { morseCode } from "./morseCode.js";
 import { morseToWord } from "./morseCode.js";
 
@@ -9,7 +5,7 @@ describe("Morse Code test cases", () => {
   const notEnoughArgsError = new Error("Please provide an input.");
   const wrongDataTypeError = new Error("This function only accepts strings.");
   const specifiCharError = new Error(
-    "This function only accepts letters from A to Z"
+    "Sorry this input box only accepts letters from A to Z."
   );
 
   test("returns the right Morse Code translation", () => {
@@ -52,7 +48,7 @@ describe("Morse Code to Words Test Cases", () => {
   const notEnoughArgsError = new Error("Please provide an input.");
   const wrongDataTypeError = new Error("This function only accepts strings.");
   const specifiCharError = new Error(
-    "This function only accepts dots and hyphens charaters of Morse Code Translation."
+    "Sorry this input box only accepts dots and hyphens characters for Morse Code Translation."
   );
 
   test("returns the right Morse Code translation", () => {

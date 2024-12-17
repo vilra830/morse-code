@@ -40,7 +40,7 @@ export const morseCode = (word) => {
     throw new Error("This function only accepts strings.");
   }
   if (!word.match(/^[A-Za-z ]+$/)) {
-    throw new Error("This function only accepts letters from A to Z");
+    throw new Error("Sorry this input box only accepts letters from A to Z.");
   }
   let wordToMorse = word.toUpperCase().split("");
   const morse = wordToMorse.map((x) => {
@@ -60,7 +60,7 @@ export const morseToWord = (symbol) => {
   }
   if (!symbol.match(/^[.-\s]*$/)) {
     throw new Error(
-      "This function only accepts dots and hyphens charaters of Morse Code Translation."
+      "Sorry this input box only accepts dots and hyphens characters for Morse Code Translation."
     );
   }
 

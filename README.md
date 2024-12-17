@@ -54,4 +54,3 @@ I encountered different kinds of testing struggles.
 1. I added a test unit that when nothing is entered which is usually evaluated to undefined, the corresponding error was not thrown. Upon checking on the console, that data type submitted with no value is a string. so I modified my test unit that if an empty string is entered, it will throw an error.
 2. Regardless of the input data type, all inputs are typed as string.
 3. Using the correct regex to evaluate the input as valid for translation or not.
-4.
