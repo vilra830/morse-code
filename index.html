@@ -5,72 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="./script.js" type="module" defer></script>
+    <link rel="stylesheet" href="./style.css" />
   </head>
-  <style>
-    * {
-      font-family: "Courier New", Courier, monospace;
-      background-color: #1f242a;
-      color: white;
-      margin-top: 5%;
-    }
 
-    h1 {
-      text-align: center;
-    }
-    .main {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-    }
-    .container {
-      display: flex;
-      flex-direction: column;
-      width: 50%;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .text-area {
-      width: 95%;
-      height: 100px;
-      margin: 0 10px;
-      padding: 12px 10px;
-      box-sizing: border-box;
-      border: 2px solid #ccc;
-      border-radius: 4px;
-      background-color: #f8f8f8;
-      font-size: 16px;
-      resize: none;
-      color: #1f242a;
-    }
-
-    button,
-    label {
-      margin: 10px;
-      font-weight: bold;
-      padding: 10px;
-    }
-
-    #errors {
-      text-align: center;
-      text-emphasis: bold;
-      color: red;
-      font-weight: bold;
-    }
-
-    @media screen and (max-width: 650px) {
-      .main {
-        width: 100%;
-        display: block;
-      }
-      .container {
-        text-align: center;
-        width: 100%;
-        display: block;
-      }
-    }
-  </style>
   <body>
     <h1>Morse Code Translator</h1>
     <div class="main">
